@@ -1,18 +1,4 @@
 #!/usr/bin/env python3
-"""
-═══════════════════════════════════════════════════════════════════════════════
- AI SRE Commander — The Self-Healing DevOps Pipeline
-═══════════════════════════════════════════════════════════════════════════════
-
- An asynchronous Python workflow that:
-   1. Ingests simulated DevOps alerts (CloudWatch-style)
-   2. Queries cognee's hybrid graph-vector memory for past resolutions
-   3. Simulates an automated triage / remediation action
-   4. Learns from the outcome to permanently enrich the knowledge graph
-
- All inference is routed through a local Ollama instance — zero cloud deps.
-═══════════════════════════════════════════════════════════════════════════════
-"""
 
 from __future__ import annotations
 
@@ -32,10 +18,8 @@ from rich.table import Table
 from rich.text import Text
 from rich import box
 
-# ─── Bootstrap ──────────────────────────────────────────────────────────────
-load_dotenv()  # reads .env → cognee picks up LLM / DB env vars automatically
+load_dotenv()
 
-# Force UTF-8 on Windows to avoid UnicodeEncodeError with emoji in Rich output
 import sys, os
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -43,12 +27,6 @@ if sys.platform == "win32":
     os.environ.setdefault("PYTHONIOENCODING", "utf-8")
 
 console = Console()
-
-
-# ═══════════════════════════════════════════════════════════════════════════
-#  §1  MOCK ALERT CATALOGUE
-# ═══════════════════════════════════════════════════════════════════════════
-
 
 class Severity(str, Enum):
     CRITICAL = "CRITICAL"
