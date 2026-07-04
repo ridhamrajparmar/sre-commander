@@ -1,0 +1,27 @@
+# =============================================================================
+#  AI SRE Commander — Local Infrastructure
+#  Neo4j (graph) runs in Docker. Ollama runs natively. LanceDB is embedded.
+# =============================================================================
+
+services:
+  # ---------------------------------------------------------------------------
+  #  Neo4j — property-graph database (cognee graph store)
+  # ---------------------------------------------------------------------------
+  neo4j:
+    image: neo4j:5.26-community
+    container_name: sre-neo4j
+    ports:
+      - "7474:7474"   # Browser UI
+      - "7687:7687"   # Bolt protocol
+    environment:
+      NEO4J_AUTH: neo4j/sre_commander_pass   # username / password
+      NEO4J_PLUGINS: '["apoc"]'
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+    restart: unless-stopped
+
+volumes:
+  neo4j_data:
+  neo4j_logs:
+

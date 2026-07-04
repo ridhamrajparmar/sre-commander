@@ -1,0 +1,5 @@
+cognee[ollama]>=1.2.0
+python-dotenv
+rich
+streamlit
+neo4j
