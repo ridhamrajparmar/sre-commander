@@ -276,7 +276,7 @@ def generate_alert() -> DevOpsAlert:
 
 
 # ═══════════════════════════════════════════════════════════════════════════
-#  §2  DISPLAY HELPERS  (Rich console output)
+# DISPLAY HELPERS  (Rich console output)
 # ═══════════════════════════════════════════════════════════════════════════
 
 _SEV_COLORS = {
@@ -317,7 +317,7 @@ def _section(icon: str, title: str) -> None:
 
 
 # ═══════════════════════════════════════════════════════════════════════════
-#  §3  COGNEE PIPELINE OPERATIONS
+# 3  COGNEE PIPELINE OPERATIONS
 # ═══════════════════════════════════════════════════════════════════════════
 
 
@@ -574,7 +574,7 @@ async def learning_loop(alert: DevOpsAlert, resolution_summary: str) -> None:
 
 
 # ═══════════════════════════════════════════════════════════════════════════
-#  §4  MAIN ORCHESTRATOR
+# 4  MAIN ORCHESTRATOR
 # ═══════════════════════════════════════════════════════════════════════════
 
 
@@ -640,7 +640,7 @@ async def run_pipeline(num_alerts: int = 3, seed: bool = True) -> None:
 
 
 # ═══════════════════════════════════════════════════════════════════════════
-#  §5  ENTRY POINT
+# 5  ENTRY POINT
 # ═══════════════════════════════════════════════════════════════════════════
 
 
