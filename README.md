@@ -220,7 +220,3 @@ The Hangover Part AI/
 ```
 
 ---
-
-## License
-
-This is a prototype / educational project. Use it as a starting point for building production-grade AI-augmented SRE workflows.
