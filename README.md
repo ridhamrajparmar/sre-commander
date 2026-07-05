@@ -1,6 +1,6 @@
 # 🚨 AI SRE Commander — The Self-Healing DevOps Pipeline
 
-> An asynchronous Python workflow that ingests simulated DevOps alerts, queries a persistent hybrid **graph + vector** memory via [Cognee](https://github.com/topoteretes/cognee) to find past resolutions, simulates automated remediation, and learns from each outcome — all running **100% locally** with zero cloud API dependencies.
+> An asynchronous Python workflow that ingests simulated DevOps alerts, queries a persistent hybrid **graph + vector** memory via [Cognee](https://github.com/topoteretes/cognee) to find past resolutions, simulates automated remediation, and learns from each outcome, all running **100% locally** with zero cloud API dependencies.
 
 ---
 
